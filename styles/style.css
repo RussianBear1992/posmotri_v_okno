@@ -36,3 +36,270 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Конец общих стилей */
+
+/* Стили блока контент начало */
+
+.content {
+  display: flex;
+  align-items: end;
+  column-gap: 30px;
+  width: 1140px;
+  margin: auto;
+  margin: 133px 30px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__details {
+  flex-grow: 1;
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow-y: auto;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: 0;
+}
+
+.content__card-link:active {
+  background: #545050;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+/* Стили блока контент конец */
+
+/* Стили карточек с видео начало */
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.content__video-card-title {
+  font-family: "Oswald";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%; 
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px; 
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+/* Стили карточек с видео конец */
+
+/* Стили результат поиска видео начало */
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Стили результат поиска видео конец */
+
+/* Стили формы поиска видео начало */
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label-text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield {
+  min-width: 230px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Fira Sans Condensed";
+  line-height: normal;
+}
+
+.search-form__textfield:focus {
+  outline: 0;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  border: 1px solid #fff;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: "";
+  display: none;
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: block;
+}
+
+.search-form__submit-button {
+  align-self: end;
+}
+
+/* Стили формы поиска видео конец */
+
+/* Стили отдельных элементов начало */
+
+.title {
+  font-family: "Oswald";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 94%; 
+  color: #FFF;
+  margin-bottom: 26px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+/* Стили вотдельных элементов конец */
+
+/* Стили кнопок начало */
+
+.button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  border: 1px solid #FFF;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px 70px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.more-button {
+  width: 100%;
+}
+
+/* Стили кнопок конец */
