@@ -39,6 +39,24 @@ ol {
 
 /* Конец общих стилей */
 
+/* Стили результат поиска видео начало */
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Стили результат поиска видео конец */
+
 /* Стили блока контент начало */
 
 .content {
@@ -47,7 +65,6 @@ ol {
   column-gap: 30px;
   width: 1140px;
   margin: auto;
-  margin: 133px 30px;
 }
 
 .content__accent {
@@ -65,7 +82,7 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .content__card-link {
@@ -79,7 +96,12 @@ ol {
 }
 
 .content__card-link:focus {
-  outline: 0;
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__card-link:active {
@@ -104,51 +126,38 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%; 
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px; 
 }
 
 .content__video-card-thumbnail {
+  flex-shrink: 0;
   width: 194px;
   height: 103px;
-}
-
-/* Стили карточек с видео конец */
-
-/* Стили результат поиска видео начало */
-
-.result__video-container {
-  position: relative;
-  width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
-}
-
-.result__video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-/* Стили результат поиска видео конец */
+/* Стили карточек с видео конец */
 
 /* Стили формы поиска видео начало */
 
 .search-form {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: start;
+  gap: 36px;
 }
 
 .search-form__fieldset {
@@ -167,6 +176,7 @@ ol {
   align-items: center;
   width: fit-content;
   cursor: pointer;
+  margin-bottom: 2px;
 }
 
 .search-form__label-text {
@@ -192,9 +202,12 @@ ol {
   border-left: none;
   border-right: none;
   background: transparent;
-  color: rgba(255, 255, 255, 0.70);
-  font-family: "Fira Sans Condensed";
+  color: #FFF;
+  font-family: "Fira Sans Condensed", sans-serif;
   line-height: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 2.5px 14px 2.5px 0;
 }
 
 .search-form__textfield:focus {
@@ -237,6 +250,8 @@ ol {
 
 .search-form__submit-button {
   align-self: end;
+  margin: 8px 0 5px 5px;
+  padding: 4px 72px;
 }
 
 /* Стили формы поиска видео конец */
@@ -244,7 +259,7 @@ ol {
 /* Стили отдельных элементов начало */
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -271,14 +286,13 @@ ol {
 .button {
   color: #FFF;
   text-align: center;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
   border: 1px solid #FFF;
   background: transparent;
   cursor: pointer;
-  padding: 6px 70px;
 }
 
 .button:hover {
@@ -300,6 +314,8 @@ ol {
 
 .more-button {
   width: 100%;
+  margin-bottom: 5px;
+  padding: 4px 30px 4px 37px;
 }
 
 /* Стили кнопок конец */
